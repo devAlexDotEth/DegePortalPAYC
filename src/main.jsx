@@ -7,10 +7,8 @@ import { BlockchainContextProvider } from "./context/BlockchainContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    
-      <BlockchainContextProvider>
-        <App />
-      </BlockchainContextProvider>
-   
+    <BlockchainContextProvider>
+      <App />
+    </BlockchainContextProvider>
   </React.StrictMode>
 );
