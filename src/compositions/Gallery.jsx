@@ -76,7 +76,7 @@ const Gallery = () => {
       </Navigation>
 
       {isRevealed &&
-        <Dialog onClick={() => setIsRevealed(!isRevealed)} image={DialogHeader}>
+        <Dialog backdropClose={() => setIsRevealed(!isRevealed)} image={DialogHeader}>
           <Body size='L'>Sheesh! Please select 1 NFT</Body>
           <Button size='M' variant="PRIMARY" onClick={() => setIsRevealed(!isRevealed)}>Ok</Button>
         </Dialog>
