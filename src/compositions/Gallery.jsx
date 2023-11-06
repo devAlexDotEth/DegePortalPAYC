@@ -9,6 +9,8 @@ import Wallet from '../components/wallet';
 import Portal from "../template/portal";
 import Box from "../components/box";
 import Dialog from "../components/dialog";
+import DialogHeader from "../assets/dialog-header.png";
+import Body from "../components/body";
 
 const Gallery = () => {
 
@@ -73,9 +75,12 @@ const Gallery = () => {
         <Button as="a" variant='TERTIARY' size='M' href='https://pepeapeyachtclub.com' target="_blank">Return home</Button>
       </Navigation>
 
-      {/* Dialog Error */}
-      {isRevealed && <Dialog message="Sheesh! Please select 1 NFT" onClick={() => setIsRevealed(!isRevealed)} />}
-
+      {isRevealed &&
+        <Dialog onClick={() => setIsRevealed(!isRevealed)} image={DialogHeader}>
+          <Body size='L'>Sheesh! Please select 1 NFT</Body>
+          <Button size='M' variant="PRIMARY" onClick={() => setIsRevealed(!isRevealed)}>Ok</Button>
+        </Dialog>
+      }
       {/* Popover Exchanging */}
       <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
 
